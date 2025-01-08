@@ -26,40 +26,40 @@ public class Ejemplo081 {
         entrada.nextLine();
         System.out.println("ingrese \"1\" para la suma o \"2\" para la "
                 + "multiplicacion");
-        operacion= entrada.nextLine();
-        switch (operacion){
+        operacion = entrada.nextLine();
+        switch (operacion) {
             case "1":
                 mensaje = obtenerTablaSumar(limite, tabla);
-            break;
+                break;
             case "2":
                 mensaje = obtenerTablaMultiplicar(limite, tabla);
         }
-               
+
         System.out.printf("%s\n", mensaje);
 
     }
-        
-    public static String obtenerTablaSumar(int limite, int tabla){
+
+    public static String obtenerTablaSumar(int limite, int tabla) {
         int operacion;
         String cadena = "";
         for (int i = 1; i <= limite; i++) {
             operacion = tabla + i;
-            cadena = String.format("%s%d + %d = %d\n", cadena, tabla, i, 
+            cadena = String.format("%s%d + %d = %d\n", cadena, tabla, i,
                     operacion);
         }
-        return cadena;        
+        return cadena;
     }
-    
-    public static String obtenerTablaMultiplicar(int limite, int tabla){
+
+    public static String obtenerTablaMultiplicar(int limite, int tabla) {
         int operacion;
         String cadena = "";
         for (int i = 1; i <= limite; i++) {
             operacion = tabla * i;
-            cadena = String.format("%s%d * %d = %d\n", cadena, tabla, i, 
+            cadena = String.format("%s%d * %d = %d\n", cadena, tabla, i,
                     operacion);
         }
         return cadena;
-        
+
     }
-    
+
 }
